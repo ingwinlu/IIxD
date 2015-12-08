@@ -12,6 +12,9 @@
 
         <!-- Custom CSS -->
         <link href="./css/iixd.css" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body id="page-top">
         <!-- Navigation -->
@@ -48,20 +51,61 @@
         <section id="main">
             <div class="container">
                 <div class="row">
-                    <div class="well text-center">
-                        <h2>Register</h2>
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-addon" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                            <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="register">
+                            <h2>Register</h2>
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- email -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="emailinput">Email</label>
+                                        <div class="col-md-8">
+                                            <input id="emailinput" name="emailinput" type="text" placeholder="place@holder.com" class="form-control input-md" required="">
+                                            <span class="help-block">Your email address.</span>
+                                         </div>
+                                    </div>
+                                    <!-- password -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="passwordinput">Password</label>
+                                         <div class="col-md-8">
+                                             <input id="passwordinput" name="passwordinput" type="password" placeholder="password" class="form-control input-md" required="">
+                                             <span class="help-block">The password you want to register with.</span>
+                                         </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary pull-right">Register</button>
+                                </fieldset>
+                            </form>
                         </div>
-                        <br />
-                        <button type="button" class="btn btn-success btn-block btn-lg">Register now!</button>
-
-                        <h2>Login with</h2>
-                        <img src="./img/fb.jpg" />
-                        <img src="./img/google.jpg" />
-                        <img src="./img/twitter.jpg" />
+                        <div class="oauth">
+                            <h2>or...</h2>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <a class="btn btn-social btn-google-plus btn-lg btn-block" href="auth/google" role="button">
+                                            <i class="fa fa-google-plus-square"></i>  <span>Login with <strong>Google+</strong></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a class="btn btn-social btn-twitter btn-lg btn-block" href="auth/twitter" role="button">
+                                            <i class="fa fa-twitter-square"></i>  <span>Login with <strong>Twitter</strong></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row button-row">
+                                    <div class="col-md-4">
+                                        <a class="btn btn-social btn-facebook btn-lg btn-block" href="auth/facebook" role="button">
+                                            <i class="fa fa-facebook-square"></i>  <span>Login with <strong>Facebook</strong></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a class="btn btn-social btn-github btn-lg btn-block" href="auth/github" role="button">
+                                            <i class="fa fa-github-square"></i>  <span>Login with <strong>Github</strong></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
