@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>IIxD</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="./css/iixd.css" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+             <div class="container">
+                 <!-- Brand and toggle get grouped for better mobile display -->
+                 <div class="navbar-header page-scroll">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                         <span class="sr-only">Toggle navigation</span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand" href="./index.html">IIxD</a>
+                 </div>
+
+                 <!-- Collect nav items -->
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     <ul class="nav navbar-nav navbar-right">
+                         <li class="hidden">
+                             <a href="#page-top"></a>
+                         </li>
+                         <li>
+                             <a href="./login.html">Login</a>
+                         </li>
+                         <li>
+                             <a href="./register.html">Register</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+        </nav>
+
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="suche">
+                            <h2>I found something</h2>
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- description -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="searchfield">Search</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="searchfield" name="searchfield"placeholder="Search..." class="form-control input-md"></textarea>
+                                         </div>
+                                    </div>
+                                    <!-- Event -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="selectevent">Event</label>
+                                        <div class="col-md-8">
+                                            <select id="selectevent" name="selectevent" class="form-control">
+                                                <option value="All">All</option>
+                                                <option value="Donauinsel Fest">Donauinsel Fest</option>
+                                                <option value="NovaRock">NovaRock</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary pull-right">Search</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="ergebnis">
+                            <h2>What people are missing</h2>
+                            <table class="table">
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Event</th>
+                                </tr>
+                                <tr data-toggle="modal" data-id="1" data-target="#myModal" class="result">
+                                    <td>
+                                        <img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
+                                    </td>
+                                    <td>Geldtasche aus Leder</td>
+                                    <td>NovaRock</td>
+                                </tr>
+                                <tr data-toggle="modal" data-id="2" data-target="#myModal" class="result">
+                                    <td>
+                                        <img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
+                                    </td>
+                                    <td>Bieröffner/Schlüsselanhänger
+                                    </td>
+                                    <td>Donauinsel Fest</td>
+                                </tr>
+                                <tr data-toggle="modal" data-id="3" data-target="#myModal" class="result">
+                                    <td>
+                                        <!--img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
+                                    </td>
+                                    <td>Regenschirm keine Aufschrift
+                                    </td>
+                                    <td>Donauinsel Fest</td>
+                                </tr>
+                                <tr data-toggle="modal" data-id="4" data-target="#myModal" class="result">
+                                    <td>
+                                        <img src="./images/Download3.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
+                                    </td>
+                                    <td>Feuerzeug Zippo
+                                    </td>
+                                    <td>NovaRock</td>
+                                </tr>
+                                <tr data-toggle="modal" data-id="5" data-target="#myModal"  class="result">
+                                    <td>
+                                        <!--img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
+                                    </td>
+                                    <td>TU-Wien Regenschirm
+                                    </td>
+                                    <td>Donauinsel Fest</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--jQuery -->
+        <script src="./js/jquery.js"></script>
+
+        <!-- mocked search and filtering-->
+        <script>
+         $('#singlebutton').click(function(event) {
+           event.preventDefault();
+           var searchtext = $('#searchfield').val();
+           $('.result').each(function() {
+            (Math.random() >= 0.5) ? $(this).hide() : $(this).show();
+           })
+         })
+
+          // on event selection change, filter table
+          $('#selectevent').change(function() {
+            var selcetedEvent = $('#selectevent').val();
+            if ('All' !== selcetedEvent) return filterByEvents(selcetedEvent);
+            $('.result').show();
+          })
+
+          function filterByEvents(eventName) {
+            $('.result').hide();
+            $('td:contains("' + eventName + '")').parent().show();
+          }
+        </script>
+        <!-- Bootstrap Core JS -->
+        <script src="./js/bootstrap.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./js/iixd.js"></script>
+    </body>
+</html>
