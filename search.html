@@ -58,9 +58,9 @@
                                 <fieldset>
                                     <!-- description -->
                                     <div class="form-group">
-                                        <label class="col-md-4 control-label" for="descriptiontext">Search</label>
+                                        <label class="col-md-4 control-label" for="searchfield">Search</label>
                                         <div class="col-md-8">
-                                            <input type="text" id="descriptiontext" name="searchfield"placeholder="Search..." class="form-control input-md"></textarea>
+                                            <input type="text" id="searchfield" name="searchfield"placeholder="Search..." class="form-control input-md"></textarea>
                                          </div>
                                     </div>
                                     <!-- Event -->
@@ -68,9 +68,9 @@
                                         <label class="col-md-4 control-label" for="selectevent">Event</label>
                                         <div class="col-md-8">
                                             <select id="selectevent" name="selectevent" class="form-control">
-                                                <option value="0">All</option>
-                                                <option value="1">Donauinsel Fest</option>
-                                                <option value="2">NovaRock</option>
+                                                <option value="All">All</option>
+                                                <option value="Donauinsel Fest">Donauinsel Fest</option>
+                                                <option value="NovaRock">NovaRock</option>
                                             </select>
                                         </div>
                                     </div>
@@ -85,20 +85,20 @@
                     <div class="col-md-offset-2 col-md-8">
                         <div class="ergebnis">
                             <h2>What people are missing</h2>
-                            <table class="table table-striped">
+                            <table class="table">
                                 <tr>
                                     <th>Image</th>
                                     <th>Description</th>
                                     <th>Event</th>
                                 </tr>
-                                <tr data-toggle="modal" data-id="1" data-target="#myModal">
+                                <tr data-toggle="modal" data-id="1" data-target="#myModal" class="result">
                                     <td>
                                         <img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
                                     </td>
                                     <td>Geldtasche aus Leder</td>
                                     <td>NovaRock</td>
                                 </tr>
-                                <tr data-toggle="modal" data-id="2" data-target="#myModal">
+                                <tr data-toggle="modal" data-id="2" data-target="#myModal" class="result">
                                     <td>
                                         <img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
                                     </td>
@@ -106,7 +106,7 @@
                                     </td>
                                     <td>Donauinsel Fest</td>
                                 </tr>
-                                <tr data-toggle="modal" data-id="3" data-target="#myModal">
+                                <tr data-toggle="modal" data-id="3" data-target="#myModal" class="result">
                                     <td>
                                         <!--img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
                                     </td>
@@ -114,7 +114,7 @@
                                     </td>
                                     <td>Donauinsel Fest</td>
                                 </tr>
-                                <tr data-toggle="modal" data-id="4" data-target="#myModal">
+                                <tr data-toggle="modal" data-id="4" data-target="#myModal" class="result">
                                     <td>
                                         <img src="./images/Download3.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
                                     </td>
@@ -122,7 +122,7 @@
                                     </td>
                                     <td>NovaRock</td>
                                 </tr>
-                                <tr data-toggle="modal" data-id="5" data-target="#myModal">
+                                <tr data-toggle="modal" data-id="5" data-target="#myModal"  class="result">
                                     <td>
                                         <!--img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
                                     </td>
@@ -160,6 +160,28 @@
         <!--jQuery -->
         <script src="./js/jquery.js"></script>
 
+        <!-- mocked search and filtering-->
+        <script>
+         $('#singlebutton').click(function(event) {
+           event.preventDefault();
+           var searchtext = $('#searchfield').val();
+           $('.result').each(function() {
+            (Math.random() >= 0.5) ? $(this).hide() : $(this).show();
+           })
+         })
+
+          // on event selection change, filter table
+          $('#selectevent').change(function() {
+            var selcetedEvent = $('#selectevent').val();
+            if ('All' !== selcetedEvent) return filterByEvents(selcetedEvent);
+            $('.result').show();
+          })
+
+          function filterByEvents(eventName) {
+            $('.result').hide();
+            $('td:contains("' + eventName + '")').parent().show();
+          }
+        </script>
         <!-- Bootstrap Core JS -->
         <script src="./js/bootstrap.min.js"></script>
 
