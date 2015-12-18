@@ -10,6 +10,9 @@
         <!-- Bootstrap Core CSS -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- bootstrap select CSS -->
+        <link href="./css/bootstrap-select.css" rel="stylesheet">
+
         <!-- Custom CSS -->
         <link href="./css/iixd.css" rel="stylesheet">
 
@@ -65,7 +68,7 @@
                                     <div class="form-group">
                                         <label class="col-md-4 control-label" for="selectevent">Event</label>
                                         <div class="col-md-8">
-                                            <select id="selectevent" name="selectevent" class="form-control">
+                                            <select id="selectevent" name="selectevent" class="form-control" data-live-search="true">
                                                 <option value="All">All</option>
                                                 <option value="Donauinsel Fest">Donauinsel Fest</option>
                                                 <option value="NovaRock">NovaRock</option>
@@ -191,6 +194,14 @@
         </script>
         <!-- Bootstrap Core JS -->
         <script src="./js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap Select JS -->
+        <script src="./js/bootstrap-select.js"></script>
+        <script>
+          $('#selectevent').selectpicker({
+            size: 4
+          });
+        </script>
 
         <!-- Script for Sortable table -->
         <script src="./js/sorttable.js"></script>
