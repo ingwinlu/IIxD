@@ -39,7 +39,7 @@
                          </li>
                          <p class="navbar-text">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
                          <li>
-                            <a href="#logout">Logout</a>
+                             <a href="#logout">Logout</a>
                          </li>
                      </ul>
                  </div>
@@ -83,51 +83,71 @@
                     <div class="col-md-offset-2 col-md-8">
                         <div class="ergebnis">
                             <h2>What people are missing</h2>
-                            <table class="table">
-                                <tr>
-                                    <th>Image</th>
-                                    <th>Description</th>
-                                    <th>Event</th>
-                                </tr>
-                                <tr data-toggle="modal" data-id="1" data-target="#myModal" class="result">
-                                    <td>
-                                        <img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
-                                    </td>
-                                    <td>Geldtasche aus Leder</td>
-                                    <td>NovaRock</td>
-                                </tr>
-                                <tr data-toggle="modal" data-id="2" data-target="#myModal" class="result">
-                                    <td>
-                                        <img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
-                                    </td>
-                                    <td>Bieröffner/Schlüsselanhänger
-                                    </td>
-                                    <td>Donauinsel Fest</td>
-                                </tr>
-                                <tr data-toggle="modal" data-id="3" data-target="#myModal" class="result">
-                                    <td>
-                                        <!--img src="./images/Download2.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
-                                    </td>
-                                    <td>Regenschirm keine Aufschrift
-                                    </td>
-                                    <td>Donauinsel Fest</td>
-                                </tr>
-                                <tr data-toggle="modal" data-id="4" data-target="#myModal" class="result">
-                                    <td>
-                                        <img src="./images/Download3.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;">
-                                    </td>
-                                    <td>Feuerzeug Zippo
-                                    </td>
-                                    <td>NovaRock</td>
-                                </tr>
-                                <tr data-toggle="modal" data-id="5" data-target="#myModal"  class="result">
-                                    <td>
-                                        <!--img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px;"-->
-                                    </td>
-                                    <td>TU-Wien Regenschirm
-                                    </td>
-                                    <td>Donauinsel Fest</td>
-                                </tr>
+                            <table id="myTable" class="table table-bordered table-hover sortable">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Event</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-toggle="modal" data-id="1" data-target="#myModal" class="result">
+                                        <td>
+                                            <img src="./images/Download.jpeg" alt="Geldtasche aus Leder" class="img-thumbnail" style="width:150px; height:150px">
+                                        </td>
+                                        <td>
+                                            Jan 18, 2007 01:12 PM
+                                        </td>
+                                        <td>Geldtasche aus Leder</td>
+                                        <td>NovaRock</td>
+                                    </tr>
+                                    <tr data-toggle="modal" data-id="2" data-target="#myModal" class="result">
+                                        <td>
+                                            <img src="./images/Download2.jpeg" alt="Brieföffner" class="img-thumbnail" style="width:150px; height:150px">
+                                        </td>
+                                        <td>
+                                            Jan 17, 2007 11:12 AM
+                                        </td>
+                                        <td>Bieröffner/Schlüsselanhänger
+                                        </td>
+                                        <td>Donauinsel Fest</td>
+                                    </tr>
+                                    <tr data-toggle="modal" data-id="3" data-target="#myModal" class="result">
+                                        <td>
+                                            <img src="./images/noimage.png" alt="No image available" class="img-thumbnail" style="width:150px; height:150px">
+                                        </td>
+                                        <td>
+                                            Jan 16, 2007 9:12 AM
+                                        </td>
+                                        <td>Regenschirm keine Aufschrift
+                                        </td>
+                                        <td>Donauinsel Fest</td>
+                                    </tr>
+                                    <tr data-toggle="modal" data-id="4" data-target="#myModal" class="result">
+                                        <td>
+                                            <img src="./images/Download3.jpeg" alt="Zippo Feuerzeug" class="img-thumbnail" style="width:150px; height:150px">
+                                        </td>
+                                        <td>
+                                            Jan 15, 2007 10:18 AM
+                                        </td>
+                                        <td>Feuerzeug Zippo
+                                        </td>
+                                        <td>NovaRock</td>
+                                    </tr>
+                                    <tr data-toggle="modal" data-id="5" data-target="#myModal"  class="result">
+                                        <td>
+                                            <img src="./images/noimage.png" alt="No image available" class="img-thumbnail" style="width:150px; height:150px">
+                                        </td>
+                                        <td>
+                                            Jan 14, 2007 08:05 AM
+                                        </td>
+                                        <td>TU-Wien Regenschirm
+                                        </td>
+                                        <td>Donauinsel Fest</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div> 
@@ -141,22 +161,22 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Kontaktdaten</h4>
               </div>
               <div class="modal-body">
-                ...
+                <div>
+                    <p>example@example.com</p>
+                </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
               </div>
             </div>
           </div>
         </div>
 
-
-        <!--jQuery -->
-        <script src="./js/jquery.js"></script>
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.js"></script>
 
         <!-- mocked search and filtering-->
         <script>
@@ -182,6 +202,9 @@
         </script>
         <!-- Bootstrap Core JS -->
         <script src="./js/bootstrap.min.js"></script>
+
+        <!-- Script for Sortable table -->
+        <script src="./js/sorttable.js"></script>
 
         <!-- Custom JS -->
         <script src="./js/iixd.js"></script>
